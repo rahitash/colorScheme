@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <title>Colory</title>
+
+  <body>
+    <div id="container">
+      <div id="scheme-selector">
+        <input id="color-picker" type="color" value="#ff0000" />
+        <select id="scheme">
+          <option>Monochrome</option>
+          <option>Monochrome-dark</option>
+          <option>Monochrome-light</option>
+          <option>Analogic</option>
+          <option>Complement</option>
+          <option>Analogic-complement</option>
+          <option>Triad</option>
+        </select>
+        <button id="get-scheme">Get color scheme</button>
+      </div>
+
+      <div id="colors">
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+      </div>
+
+      <div id="hex-values">
+        <div class="hex">#00000</div>
+        <div class="hex">#00000</div>
+        <div class="hex">#00000</div>
+        <div class="hex">#00000</div>
+        <div class="hex">#00000</div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
