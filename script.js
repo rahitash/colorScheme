@@ -25,16 +25,29 @@ function setColors(hex, count, mode) {
         .then(res => res.json())
         .then(data => {
 
-            for (let i = 0; i < data.colors.length ; i++) {
+            for (let i = 0; i < data.colors.length; i++) {
+                
+                let hexValue =  data.colors[i].hex.value
             
-                colorBoxes[i].style.backgroundColor = data.colors[i].hex.value
-                hexValues[i].textContent = data.colors[i].hex.value
+                colorBoxes[i].style.backgroundColor = hexValue
+                hexValues[i].textContent = hexValue
 
+                colorBoxes[i].addEventListener("click", function () {
+                    copyValue(hexValue)
+                })
+
+                hexValues[i].addEventListener("click", function () {
+                    copyValue(hexValue)
+                })
+                
                 }
             }
     
-        )
+    )
     
 }
 
-
+function copyValue(value) {
+    navigator.clipboard.writeText(value)
+    alert(`Copied: ${value}`)
+}

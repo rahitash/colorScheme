@@ -32,6 +32,7 @@ body {
   display: flex;
   width: 20%;
   height: 350px;
+  cursor: pointer;
 }
 
 #hex-values > div {
@@ -40,6 +41,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 1em 1em;
+  cursor: pointer;
 }
 
 #color-picker {
